@@ -17,6 +17,13 @@ struct HashType
     struct RecordType *record; // create a pointer to a RecordType
 };
 
+//Prototyped functions just good practice
+int hash(int x, int tableSize); 
+int parseData(char *inputFileName, struct RecordType **ppData);
+void printRecords(struct RecordType pData[], int dataSz);
+void insertRecord(struct HashType *hashTable, struct RecordType *record, int tableSize);
+void displayRecordsInHash(struct HashType *hashTable, int tableSize);
+
 // Compute the hash function
 int hash(int x, int tableSize)
 {
